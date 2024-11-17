@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: green;
+  padding: 1.25rem;
+}
+nav {
+  background-color: lime;
+  display: grid;
+  place-items: center;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul a {
+  display: inline-block;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s ease-in;
+  font-size: 1.1rem;
+}
+nav ul a:hover {
+  background-color: green;
+  color: white;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.item img:hover {
+  transform: scale(1.04);
+}
+.item h4 {
+  padding: 5px;
+  text-align: center;
+}
+.item button {
+  padding: 5px 30px;
+  border: none;
+  outline: none;
+  background-color: green;
+  color: white;
+  border-radius: 4px;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.item button:hover {
+  background-color: lime;
+  transform: scale(1.08);
+}
+.contact {
+  padding: 20px;
+  background-color: white;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contacts h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: lime;
+  transform: scale(1.08);
+}
+.follow-us {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: lime;
+  transform: scale(1.2);
+}
+footer {
+  background-color: green;
+  color: white;
+}
+footer p {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Medium screens (tablets, etc.) */
+@media (max-width: 991px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+  }
+  .social-icons a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  nav ul a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+  .item img {
+    height: 300px;
+  }
+  .item button {
+    font-size: 18px;
+  }
+  form input,
+  form textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
